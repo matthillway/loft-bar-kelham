@@ -2,39 +2,39 @@
 interface GalleryImage {
   id: number;
   alt: string;
-  gradient: string;
+  src: string;
 }
 
 const images: GalleryImage[] = [
   {
     id: 1,
-    alt: "Bar interior with exposed brick",
-    gradient: "from-[#b87333]/30 via-[#1a1a1a] to-[#252525]",
+    alt: "Craft cocktails being prepared",
+    src: "/images/gallery-1.jpg",
   },
   {
     id: 2,
-    alt: "Signature cocktails",
-    gradient: "from-[#252525] via-[#b87333]/20 to-[#1a1a1a]",
+    alt: "Signature cocktail with garnish",
+    src: "/images/gallery-2.jpg",
   },
   {
     id: 3,
-    alt: "Exposed brick and industrial details",
-    gradient: "from-[#1a1a1a] via-[#252525] to-[#b87333]/25",
+    alt: "Bar atmosphere and lighting",
+    src: "/images/gallery-3.jpg",
   },
   {
     id: 4,
-    alt: "Live events and atmosphere",
-    gradient: "from-[#b87333]/20 via-[#252525] to-[#1a1a1a]",
+    alt: "Moody bar interior",
+    src: "/images/gallery-4.jpg",
   },
   {
     id: 5,
-    alt: "Outdoor seating area",
-    gradient: "from-[#252525] via-[#1a1a1a] to-[#b87333]/30",
+    alt: "Bartender crafting drinks",
+    src: "/images/gallery-5.jpg",
   },
   {
     id: 6,
-    alt: "Bartender crafting drinks",
-    gradient: "from-[#1a1a1a] via-[#b87333]/25 to-[#252525]",
+    alt: "Evening drinks and ambiance",
+    src: "/images/gallery-6.jpg",
   },
 ];
 ---
@@ -53,15 +53,13 @@ const images: GalleryImage[] = [
       {
         images.map((image) => (
           <div class="group relative aspect-square overflow-hidden rounded-lg cursor-pointer">
-            <div
-              class={`absolute inset-0 bg-gradient-to-br ${image.gradient} transition-all duration-500 group-hover:scale-110`}
+            <img
+              src={image.src}
+              alt={image.alt}
+              class="absolute inset-0 w-full h-full object-cover transition-all duration-500 group-hover:scale-110"
+              loading="lazy"
             />
-            <div class="absolute inset-0 bg-[#b87333]/0 transition-all duration-300 group-hover:bg-[#b87333]/10" />
-            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <span class="text-[#f5f5dc]/80 text-xs uppercase tracking-widest">
-                {image.alt}
-              </span>
-            </div>
+            <div class="absolute inset-0 bg-[#1a1a1a]/20 transition-all duration-300 group-hover:bg-[#b87333]/20" />
           </div>
         ))
       }
