@@ -1,0 +1,68 @@
+---
+interface Drink {
+  name: string;
+  description: string;
+  price: string;
+}
+
+const drinks: Drink[] = [
+  {
+    name: "Kelham Mule",
+    description: "Vodka, ginger beer, lime, copper pot garnish",
+    price: "9.50",
+  },
+  {
+    name: "The Steelworker",
+    description: "Bourbon, honey, lemon, bitters",
+    price: "10",
+  },
+  {
+    name: "River Don Old Fashioned",
+    description: "Rye whiskey, demerara, Angostura",
+    price: "10.50",
+  },
+  {
+    name: "Industrial Negroni",
+    description: "Gin, Campari, sweet vermouth",
+    price: "9.50",
+  },
+];
+---
+
+<section id="drinks" class="bg-[#1a1a1a] py-20 px-6">
+  <div class="max-w-6xl mx-auto">
+    <h2
+      class="font-['Playfair_Display'] text-4xl md:text-5xl text-[#f5f5dc] text-center mb-12"
+    >
+      Signature Cocktails
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+      {
+        drinks.map((drink) => (
+          <div class="bg-[#252525] border border-[#b87333]/40 rounded-lg p-6 transition-all duration-300 hover:border-[#b87333] hover:shadow-lg hover:shadow-[#b87333]/10">
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="font-['Playfair_Display'] text-2xl text-[#b87333]">
+                {drink.name}
+              </h3>
+              <span class="text-[#f5f5dc] text-lg font-medium">
+                £{drink.price}
+              </span>
+            </div>
+            <p class="text-[#f5f5dc]/70 text-sm leading-relaxed">
+              {drink.description}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+
+    <p class="text-center text-[#f5f5dc]/60 text-sm italic">
+      Full cocktail menu available at the bar
+    </p>
+  </div>
+</section>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
+</style>
