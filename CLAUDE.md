@@ -16,21 +16,14 @@ Single-page landing website for Loft Bar Kelham, a cocktail bar in Sheffield's K
 
 ## Deployment
 
-### SFTP Credentials (one.com)
-```
-Host: ssh.cn4oam3ha.service.one
-Username: cn4oam3ha_ssh
-Port: 22
-Password: Blades12345!
-```
+Hosted on one.com via SFTP. Credentials stored in password manager (not in repo).
 
-### Deploy Commands
 ```bash
 # Build production
 npm run build
 
-# Deploy via SFTP (using lftp)
-lftp -e "set sftp:auto-confirm yes; open -u cn4oam3ha_ssh,Blades12345! sftp://ssh.cn4oam3ha.service.one:22; mirror -R --verbose dist/ /www/; quit"
+# Deploy via SFTP - credentials from password manager
+lftp -e "set sftp:auto-confirm yes; open -u $SFTP_USER,$SFTP_PASS sftp://$SFTP_HOST:22; mirror -R --verbose dist/ webroots/807c142f/; quit"
 ```
 
 ## Project Structure
