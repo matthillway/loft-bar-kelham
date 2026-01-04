@@ -1,11 +1,11 @@
 ---
-interface Drink {
+interface Cocktail {
   name: string;
   description: string;
   price: string;
 }
 
-const drinks: Drink[] = [
+const cocktails: Cocktail[] = [
   {
     name: "Kelham Mule",
     description: "Vodka, ginger beer, lime, copper pot garnish",
@@ -22,47 +22,49 @@ const drinks: Drink[] = [
     price: "10.50",
   },
   {
-    name: "Industrial Negroni",
-    description: "Gin, Campari, sweet vermouth",
+    name: "Garden Spritz",
+    description: "Aperol, prosecco, elderflower, fresh herbs",
     price: "9.50",
   },
 ];
 ---
 
-<section id="drinks" class="bg-[#1a1a1a] py-20 px-6">
-  <div class="max-w-6xl mx-auto">
-    <h2
-      class="font-['Playfair_Display'] text-4xl md:text-5xl text-[#f5f5dc] text-center mb-4"
-    >
-      The Bar
-    </h2>
-    <p class="text-center text-[#f5f5dc]/70 text-lg mb-12">
-      Craft beer, gin & signature cocktails
-    </p>
+<section id="drinks" class="bg-[#5D6B5D] py-20 px-6">
+  <div class="max-w-4xl mx-auto">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <span class="text-[#F5F5F0]/60 text-sm tracking-widest uppercase mb-3 block">
+        The Menu
+      </span>
+      <h2 class="font-sans text-3xl md:text-4xl text-[#F5F5F0] tracking-[0.1em] uppercase font-light">
+        Signature Cocktails
+      </h2>
+    </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+    <!-- Cocktails Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-0">
       {
-        drinks.map((drink) => (
-          <div class="bg-[#252525] border border-[#b87333]/40 rounded-lg p-6 transition-all duration-300 hover:border-[#b87333] hover:shadow-lg hover:shadow-[#b87333]/10">
-            <div class="flex justify-between items-start mb-3">
-              <h3 class="font-['Playfair_Display'] text-2xl text-[#b87333]">
-                {drink.name}
+        cocktails.map((cocktail) => (
+          <div class="py-6 border-b border-[#F5F5F0]/20">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-sans text-lg text-[#F5F5F0] tracking-wide">
+                {cocktail.name}
               </h3>
-              <span class="text-[#f5f5dc] text-lg font-medium">
-                £{drink.price}
+              <span class="text-[#E8B4B8] font-medium">
+                £{cocktail.price}
               </span>
             </div>
-            <p class="text-[#f5f5dc]/70 text-sm leading-relaxed">
-              {drink.description}
+            <p class="text-sm text-[#F5F5F0]/60">
+              {cocktail.description}
             </p>
           </div>
         ))
       }
     </div>
 
-    <p class="text-center text-[#f5f5dc]/60 text-sm italic">
-      Plus a great selection of beers, wines & spirits
+    <!-- Footer Note -->
+    <p class="text-center text-[#F5F5F0]/60 text-sm mt-12">
+      Plus craft beers, premium gins, wines & more
     </p>
   </div>
 </section>
-

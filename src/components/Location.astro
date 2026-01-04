@@ -1,66 +1,79 @@
 ---
 // Location section - Find Us with address and embedded Google Maps
+// Botanical brand design - white background, two-column grid
 ---
 
-<section id="find-us" class="bg-[#1a1a1a] py-16 md:py-24">
-  <div class="container mx-auto px-6 md:px-12">
-    <h2 class="text-3xl md:text-4xl font-bold text-[#f5f5dc] mb-12 text-center tracking-wide">
-      Find Us
-    </h2>
-
-    <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-      <!-- Left: Address and Info -->
-      <div class="space-y-6 text-center md:text-left">
-        <div>
-          <h3 class="text-xl font-semibold text-[#b87333] mb-3">Address</h3>
-          <p class="text-[#f5f5dc] text-lg leading-relaxed">
-            23 Alma Street<br />
-            Kelham Island<br />
-            Sheffield, S3 8SA
-          </p>
-        </div>
-
-        <div>
-          <p class="text-[#f5f5dc]/80 text-lg italic">
-            Hidden in Kelham Island, overlooking the River Don
-          </p>
-        </div>
-
-        <div class="pt-4">
-          <h3 class="text-xl font-semibold text-[#b87333] mb-3">Opening Hours</h3>
-          <div class="text-[#f5f5dc]/80 text-lg space-y-1">
-            <p><span class="text-[#f5f5dc]">Thursday & Friday:</span> 4:30pm - late</p>
-            <p><span class="text-[#f5f5dc]">Saturday:</span> 12:00pm - late</p>
-          </div>
-          <p class="text-[#f5f5dc]/60 text-sm mt-3">
-            Follow <a
-              href="https://instagram.com/loftkelham"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-[#b87333] hover:text-[#d4955c] transition-colors underline underline-offset-4"
-            >@loftkelham</a> for events & updates
-          </p>
-        </div>
-      </div>
-
-      <!-- Right: Google Maps Embed -->
-      <div class="relative">
-        <div class="rounded-lg overflow-hidden border-2 border-[#b87333]/30 shadow-2xl">
+<section id="find-us" class="bg-white py-20 md:py-28">
+  <div class="container mx-auto px-6 md:px-12 max-w-6xl">
+    <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
+      <!-- Left: Google Maps Embed -->
+      <div class="order-2 md:order-1">
+        <div class="rounded-lg overflow-hidden shadow-lg">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2379.8!2d-1.4734!3d53.3897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDIzJzIzLjAiTiAxwrAyOCcyNC4yIlc!5e0!3m2!1sen!2suk!4v1234567890"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2379.5!2d-1.4734!3d53.3897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48797882d60e8c91%3A0x1a5f25f6f9c5c2d1!2s23%20Alma%20St%2C%20Sheffield%20S3%208SA!5e0!3m2!1sen!2suk!4v1704067200000!5m2!1sen!2suk"
             width="100%"
-            height="350"
+            height="400"
             style="border:0;"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            title="Loft Bar Kelham Location"
+            title="The Loft Bar Location - 23 Alma Street, Kelham Island, Sheffield"
             class="w-full"
           ></iframe>
         </div>
-        <!-- Decorative corner accents -->
-        <div class="absolute -top-2 -left-2 w-8 h-8 border-t-2 border-l-2 border-[#b87333] rounded-tl-lg"></div>
-        <div class="absolute -bottom-2 -right-2 w-8 h-8 border-b-2 border-r-2 border-[#b87333] rounded-br-lg"></div>
+      </div>
+
+      <!-- Right: Info -->
+      <div class="order-1 md:order-2 space-y-8">
+        <!-- Section Label -->
+        <p class="text-[#5D6B5D] text-sm uppercase tracking-[0.3em] font-medium">
+          Find Us
+        </p>
+
+        <!-- Heading -->
+        <h2 class="font-sans text-2xl md:text-3xl font-light text-[#4A4A4A] leading-tight tracking-[0.1em] uppercase">
+          Visit The Loft
+        </h2>
+
+        <!-- Address -->
+        <div class="space-y-2">
+          <p class="text-[#7A7A7A] text-sm uppercase tracking-wide">Address</p>
+          <p class="text-[#4A4A4A] text-lg leading-relaxed">
+            23 Alma Street<br />
+            Kelham Island<br />
+            Sheffield S3 8SA
+          </p>
+        </div>
+
+        <!-- Opening Hours -->
+        <div class="space-y-3">
+          <p class="text-[#7A7A7A] text-sm uppercase tracking-wide">Opening Hours</p>
+          <div class="text-[#4A4A4A] text-lg space-y-1">
+            <p><span class="font-medium">Thursday & Friday:</span> 4:30pm - late</p>
+            <p><span class="font-medium">Saturday:</span> 12:00pm - late</p>
+          </div>
+        </div>
+
+        <!-- Note -->
+        <p class="text-[#5D6B5D] text-base italic">
+          Look for the white lettering on the brick building
+        </p>
+
+        <!-- Social -->
+        <div class="pt-4 border-t border-gray-200">
+          <p class="text-[#7A7A7A] text-sm uppercase tracking-wide mb-2">Follow Us</p>
+          <a
+            href="https://instagram.com/loftkelham"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-[#5D6B5D] hover:text-[#4A5A4A] transition-colors"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd" d="M12.017 0C8.396 0 7.989.013 6.756.072 5.524.131 4.645.333 3.877.63a5.918 5.918 0 0 0-2.188 1.424A5.92 5.92 0 0 0 .266 4.243c-.297.768-.5 1.647-.558 2.878C-.352 8.353-.365 8.76-.365 12.38s.013 4.028.072 5.261c.058 1.232.261 2.11.558 2.879a5.92 5.92 0 0 0 1.423 2.188 5.92 5.92 0 0 0 2.188 1.423c.769.297 1.647.5 2.879.558 1.233.059 1.64.072 5.261.072s4.028-.013 5.261-.072c1.232-.058 2.11-.261 2.879-.558a5.92 5.92 0 0 0 2.188-1.423 5.92 5.92 0 0 0 1.423-2.188c.297-.769.5-1.647.558-2.879.059-1.233.072-1.64.072-5.261s-.013-4.027-.072-5.26c-.058-1.232-.261-2.111-.558-2.879a5.92 5.92 0 0 0-1.423-2.188A5.918 5.918 0 0 0 20.157.63c-.769-.297-1.647-.5-2.879-.558C16.045.013 15.638 0 12.017 0zm0 2.16c3.566 0 3.986.014 5.397.077 1.304.06 2.01.276 2.483.458.624.243 1.07.534 1.539 1.002.469.469.76.915 1.002 1.539.182.473.399 1.179.458 2.483.063 1.411.077 1.831.077 5.397s-.014 3.986-.077 5.397c-.06 1.304-.276 2.01-.458 2.483a4.16 4.16 0 0 1-1.002 1.539 4.16 4.16 0 0 1-1.539 1.002c-.473.182-1.179.399-2.483.458-1.41.063-1.831.077-5.397.077s-3.986-.014-5.397-.077c-1.304-.06-2.01-.276-2.483-.458a4.16 4.16 0 0 1-1.539-1.002 4.16 4.16 0 0 1-1.002-1.539c-.182-.473-.399-1.179-.458-2.483-.063-1.411-.077-1.831-.077-5.397s.014-3.986.077-5.397c.06-1.304.276-2.01.458-2.483.243-.624.534-1.07 1.002-1.539.469-.468.915-.759 1.539-1.002.473-.182 1.179-.398 2.483-.458 1.411-.063 1.831-.077 5.397-.077zm0 3.678a6.543 6.543 0 1 0 0 13.085 6.543 6.543 0 0 0 0-13.085zm0 10.786a4.244 4.244 0 1 1 0-8.488 4.244 4.244 0 0 1 0 8.488zm8.327-11.045a1.53 1.53 0 1 1-3.06 0 1.53 1.53 0 0 1 3.06 0z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-lg">@loftkelham</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>

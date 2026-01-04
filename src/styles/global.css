@@ -1,17 +1,40 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap');
 
-/* Custom theme for Loft Bar Kelham */
+/* Botanical theme for Loft Bar Kelham */
 @theme {
-  --color-charcoal: #1a1a1a;
-  --color-copper: #b87333;
-  --color-copper-light: #d4915a;
-  --color-cream: #f5f5dc;
-  --color-brick: #8b4513;
-  --color-card: #252525;
-  --color-card-hover: #2a2a2a;
+  /* Primary - Sage Green */
+  --color-sage: #5D6B5D;
+  --color-sage-light: #6B7B6B;
+  --color-sage-dark: #4A5A4A;
+  --color-sage-muted: #8A9A8A;
 
-  --font-display: 'Playfair Display', serif;
-  --font-body: 'Inter', system-ui, sans-serif;
+  /* Cream/White */
+  --color-cream: #F5F5F0;
+  --color-white: #FFFFFF;
+  --color-off-white: #FAFAF8;
+
+  /* Deep Forest Green */
+  --color-forest: #2D5A3D;
+  --color-forest-light: #3D6A4D;
+
+  /* Accent Colors */
+  --color-royal-blue: #1E4B8E;
+  --color-blush-pink: #E8B4B8;
+  --color-soft-pink: #F0D0D4;
+  --color-lavender: #9B7BB8;
+  --color-wisteria: #C9A0DC;
+  --color-amber: #D4A574;
+
+  /* Neutrals */
+  --color-charcoal: #2A2A2A;
+  --color-dark-gray: #4A4A4A;
+  --color-medium-gray: #7A7A7A;
+  --color-light-gray: #E5E5E5;
+
+  /* Typography */
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'Montserrat', sans-serif;
 }
 
 /* Base styles */
@@ -21,42 +44,64 @@ html {
 
 body {
   font-family: var(--font-body);
-  background-color: var(--color-charcoal);
-  color: var(--color-cream);
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Typography */
+/* Typography - using sans-serif to match logo style */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display);
-  font-weight: 600;
+  font-family: var(--font-body);
+  font-weight: 400;
   line-height: 1.2;
+  letter-spacing: 0.05em;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-sage);
+  color: var(--color-cream);
 }
 
 /* Custom utilities */
-.text-copper {
-  color: var(--color-copper);
+.font-serif {
+  font-family: var(--font-heading);
 }
 
-.bg-copper {
-  background-color: var(--color-copper);
+.font-sans {
+  font-family: var(--font-body);
 }
 
-.border-copper {
-  border-color: var(--color-copper);
+.text-sage {
+  color: var(--color-sage);
 }
 
-.bg-card {
-  background-color: var(--color-card);
+.bg-sage {
+  background-color: var(--color-sage);
+}
+
+.text-cream {
+  color: var(--color-cream);
+}
+
+.bg-cream {
+  background-color: var(--color-cream);
+}
+
+.text-blush {
+  color: var(--color-blush-pink);
 }
 
 /* Scroll indicator animation */
 @keyframes bounce-slow {
   0%, 100% {
     transform: translateY(0);
+    opacity: 1;
   }
   50% {
-    transform: translateY(10px);
+    transform: translateY(8px);
+    opacity: 0.6;
   }
 }
 
@@ -67,30 +112,22 @@ h1, h2, h3, h4, h5, h6 {
 /* Form focus states */
 input:focus, textarea:focus {
   outline: none;
-  border-color: var(--color-copper);
-  box-shadow: 0 0 0 2px rgba(184, 115, 51, 0.2);
+  border-color: var(--color-cream);
+  box-shadow: none;
 }
 
-/* Button hover */
-.btn-copper {
-  background-color: var(--color-copper);
-  color: var(--color-charcoal);
-  transition: all 0.3s ease;
+/* Smooth image transitions */
+img {
+  transition: transform 0.5s ease;
 }
 
-.btn-copper:hover {
-  background-color: var(--color-copper-light);
-  transform: translateY(-2px);
-}
-
-/* Image hover effects */
+/* Gallery hover */
 .gallery-image {
-  transition: all 0.3s ease;
+  transition: transform 0.5s ease;
 }
 
 .gallery-image:hover {
   transform: scale(1.05);
-  opacity: 0.9;
 }
 
 /* Mobile menu transitions */
@@ -98,25 +135,29 @@ input:focus, textarea:focus {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Gradient overlays */
+/* Hero gradient overlay */
 .hero-gradient {
   background: linear-gradient(
     to bottom,
-    rgba(26, 26, 26, 0.7) 0%,
-    rgba(26, 26, 26, 0.5) 50%,
-    rgba(26, 26, 26, 0.9) 100%
+    rgba(93, 107, 93, 0.8) 0%,
+    rgba(93, 107, 93, 0.6) 50%,
+    rgba(93, 107, 93, 0.9) 100%
   );
 }
 
-/* Card styling */
-.drink-card {
-  background-color: var(--color-card);
-  border: 1px solid rgba(184, 115, 51, 0.3);
+/* Button styling */
+.btn-primary {
+  background-color: var(--color-cream);
+  color: var(--color-sage);
   transition: all 0.3s ease;
 }
 
-.drink-card:hover {
-  border-color: var(--color-copper);
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+.btn-primary:hover {
+  background-color: var(--color-white);
+}
+
+/* Drink item styling */
+.drink-item {
+  border-bottom: 1px solid rgba(245, 245, 240, 0.2);
+  padding-bottom: 1.5rem;
 }

@@ -1,64 +1,65 @@
 ---
-// Hero component - Full viewport with industrial cocktail bar atmosphere
+// Hero component - Botanical escape design
 ---
 
 <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
-  <!-- Background Gradient (placeholder for actual image) -->
-  <div class="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] via-[#2a1f1a] to-[#1a1a1a]">
-    <!-- Atmospheric overlay patterns -->
-    <div class="absolute inset-0 opacity-30 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#b87333]/20 via-transparent to-transparent"></div>
-    <div class="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-[#8b4513]/30 via-transparent to-transparent"></div>
-
-    <!-- Subtle texture overlay -->
-    <div class="absolute inset-0 opacity-5 bg-[url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E')]"></div>
+  <!-- Background Image with Overlay -->
+  <div class="absolute inset-0">
+    <!-- Hero image -->
+    <img
+      src="/images/hero-interior.jpg"
+      alt="Loft Bar interior"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <!-- 30% opacity overlay -->
+    <div class="absolute inset-0 bg-[#5D6B5D]/70"></div>
+    <!-- Gradient overlay blending with sage green -->
+    <div class="absolute inset-0 bg-gradient-to-b from-[#5D6B5D]/80 via-[#5D6B5D]/60 to-[#5D6B5D]/90"></div>
   </div>
-
-  <!-- Dark overlay for text readability -->
-  <div class="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-[#1a1a1a]/50 to-[#1a1a1a]/70"></div>
 
   <!-- Content -->
   <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-    <!-- Main Title -->
-    <h1 class="mb-4">
-      <span class="block font-serif text-7xl sm:text-8xl md:text-9xl font-bold text-[#f5f5dc] tracking-wider mb-2 drop-shadow-2xl">
-        LOFT
-      </span>
-      <span class="block font-serif text-2xl sm:text-3xl md:text-4xl text-[#b87333] tracking-[0.3em] uppercase">
-        Bar Kelham
-      </span>
-    </h1>
-
-    <!-- Decorative Line -->
-    <div class="flex items-center justify-center my-8">
-      <div class="w-16 h-px bg-gradient-to-r from-transparent via-[#b87333] to-transparent"></div>
-      <div class="w-2 h-2 mx-4 rotate-45 border border-[#b87333]"></div>
-      <div class="w-16 h-px bg-gradient-to-r from-transparent via-[#b87333] to-transparent"></div>
+    <!-- Decorative Botanical Leaf Icon -->
+    <div class="mb-8 flex justify-center">
+      <svg class="w-12 h-12 text-[#F5F5F0]/60" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.38 0 2.69-.28 3.89-.78l-.01-.01C11.53 19.83 8 15.49 8 10.5 8 6.42 10.42 3 14 3c1.53 0 2.92.55 4 1.47V4c0-.55-.45-1-1-1h-2c0-.55-.45-1-1-1s-1 .45-1 1h-1V2zm2 5c-2.21 0-4 2.69-4 6 0 3.73 2.88 7.11 6.74 8.73.83-.37 1.59-.85 2.26-1.42V18c0-.55-.45-1-1-1s-1 .45-1 1v1.26c-1.08.47-2.26.74-3.5.74H12c0-1.66.67-3.16 1.76-4.24C14.84 14.84 16.34 14.17 18 14.17V12c0-2.76-1.79-5-4-5z" opacity="0.8"/>
+        <path d="M17 8c-1.5 0-2.8.83-3.46 2.06.93-.69 2.05-1.06 3.24-1.06H18c.55 0 1-.45 1-1s-.45-1-1-1h-1z"/>
+      </svg>
     </div>
 
-    <!-- Tagline -->
-    <p class="text-lg sm:text-xl md:text-2xl text-[#f5f5dc]/80 font-light tracking-wide max-w-2xl mx-auto mb-12">
-      Hidden in Kelham Island
+    <!-- Main Headline -->
+    <h1 class="font-sans text-4xl md:text-5xl lg:text-6xl text-[#F5F5F0] mb-6 tracking-[0.15em] uppercase font-light">
+      Loft Bar Kelham
+    </h1>
+
+    <!-- Subheadline -->
+    <p class="text-xl md:text-2xl text-[#F5F5F0]/90 font-light mb-6 max-w-2xl mx-auto">
+      A botanical escape in the heart of Kelham Island
     </p>
 
-    <!-- CTA Button -->
-    <a
-      href="#about"
-      class="inline-block px-8 py-4 border-2 border-[#b87333] text-[#b87333] font-medium uppercase tracking-widest text-sm
-             hover:bg-[#b87333] hover:text-[#1a1a1a] transition-all duration-300
-             focus:outline-none focus:ring-2 focus:ring-[#b87333] focus:ring-offset-2 focus:ring-offset-[#1a1a1a]"
-    >
-      Discover The Loft
-    </a>
+    <!-- Tagline -->
+    <p class="text-sm md:text-base text-[#F5F5F0]/70 uppercase tracking-[0.2em] mb-12">
+      Cocktails &middot; Craft Beer &middot; Good Times
+    </p>
   </div>
 
   <!-- Scroll Indicator -->
   <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-    <a href="#about" class="flex flex-col items-center text-[#f5f5dc]/60 hover:text-[#b87333] transition-colors duration-300 group">
-      <span class="text-xs uppercase tracking-widest mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Scroll</span>
+    <a href="#about" class="flex flex-col items-center text-[#F5F5F0]/60 hover:text-[#F5F5F0] transition-colors duration-300 group">
+      <span class="text-xs uppercase tracking-[0.2em] mb-3">Discover</span>
       <div class="w-6 h-10 border-2 border-current rounded-full flex justify-center pt-2">
         <div class="w-1 h-2 bg-current rounded-full animate-bounce-slow"></div>
       </div>
     </a>
+  </div>
+
+  <!-- Opening Hours Badge -->
+  <div class="absolute bottom-8 right-8 z-10 hidden md:block">
+    <div class="bg-[#F5F5F0]/10 backdrop-blur-sm border border-[#F5F5F0]/20 rounded-lg px-6 py-4 text-[#F5F5F0]">
+      <p class="text-xs uppercase tracking-[0.15em] mb-2 text-[#F5F5F0]/70">Opening Hours</p>
+      <p class="text-sm font-light">Thu-Fri: 4:30pm</p>
+      <p class="text-sm font-light">Sat: 12pm</p>
+    </div>
   </div>
 </section>
 
