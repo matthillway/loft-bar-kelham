@@ -5,29 +5,47 @@ interface Props {
 }
 
 const {
-  title = "LOFT | Cocktail Bar Kelham Island Sheffield",
-  description = "Discover LOFT Bar Kelham - Sheffield's premier cocktail bar in the heart of Kelham Island. Industrial heritage meets modern mixology overlooking the River Don."
+  title = "The Loft Bar Kelham Island | Cocktail Bar Sheffield | Bar Sheffield",
+  description = "The Loft Bar - Sheffield's premier cocktail bar in Kelham Island. Discover botanical elegance, signature cocktails, craft beers and a unique atmosphere overlooking the River Don. Best cocktail bar in Sheffield."
 } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, "https://www.theloftbar.uk");
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#1a1a1a" />
+    <meta name="keywords" content="cocktail bar sheffield, cocktail bar kelham island, cocktail bar kelham, bar sheffield, bar kelham island, kelham island bars, sheffield cocktail bars, best bars sheffield, loft bar kelham, the loft kelham, cocktails kelham island, craft beer kelham island, private hire sheffield" />
+    <meta name="author" content="The Loft Bar Kelham" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#5D6B5D" />
+    <meta name="geo.region" content="GB-SHF" />
+    <meta name="geo.placename" content="Sheffield" />
+    <meta name="geo.position" content="53.3897;-1.4734" />
+    <meta name="ICBM" content="53.3897, -1.4734" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
 
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:site_name" content="LOFT Bar Kelham" />
+    <meta property="og:site_name" content="The Loft Bar Kelham Island" />
+    <meta property="og:image" content="https://www.theloftbar.uk/images/hero-interior.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_GB" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://www.theloftbar.uk/images/hero-interior.jpg" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -36,12 +54,79 @@ const {
     <!-- Preconnect for Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
     <title>{title}</title>
+
+    <!-- Structured Data - LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BarOrPub",
+      "name": "The Loft Bar Kelham",
+      "alternateName": "Loft Bar Kelham Island",
+      "description": "Sheffield's premier cocktail bar in Kelham Island. Botanical elegance meets signature cocktails and craft beers.",
+      "url": "https://www.theloftbar.uk",
+      "telephone": "",
+      "email": "hello@theloftbar.uk",
+      "image": "https://www.theloftbar.uk/images/hero-interior.jpg",
+      "logo": "https://www.theloftbar.uk/images/logo.jpg",
+      "priceRange": "££",
+      "servesCuisine": "Cocktails, Craft Beer",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "23 Alma Street",
+        "addressLocality": "Sheffield",
+        "addressRegion": "South Yorkshire",
+        "postalCode": "S3 8SA",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.3897,
+        "longitude": -1.4734
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Thursday", "Friday"],
+          "opens": "16:30",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "12:00",
+          "closes": "23:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/loftkelham"
+      ],
+      "areaServed": {
+        "@type": "City",
+        "name": "Sheffield"
+      },
+      "hasMap": "https://www.google.com/maps?q=23+Alma+Street,+Sheffield+S3+8SA",
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Private Hire Available"
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Cocktail Menu"
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Craft Beer"
+        }
+      ]
+    }
+    </script>
   </head>
-  <body class="bg-[#1a1a1a] text-[#f5f5dc] min-h-screen antialiased">
-    <a href="#about" class="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:bg-[#b87333] focus:text-[#1a1a1a] focus:px-4 focus:py-2 focus:top-2 focus:left-2 focus:rounded">
+  <body class="bg-[#F5F5F0] text-[#2A2A2A] min-h-screen antialiased">
+    <a href="#about" class="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:bg-[#5D6B5D] focus:text-[#F5F5F0] focus:px-4 focus:py-2 focus:top-2 focus:left-2 focus:rounded">
       Skip to content
     </a>
     <slot />
